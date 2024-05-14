@@ -1,17 +1,45 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "posts/Trend of Road Traffic Accidents/index.html",
+    "href": "posts/Trend of Road Traffic Accidents/index.html",
+    "title": "Trends of Road Traffic Accidents",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Note\n\n\n\nThis blog utilizes accident data sourced from daily newspapers. It does not aim to substitute or dispute official police traffic reports. Instead, it aims to complement the existing narrative by providing additional context to the road traffic accident reports disseminated by the media. As such, any interpretation of these findings should be done with this context in mind.This monthly blog therefore seeks to provide patterns of major accidents on highways, given that the majority of such incidents are covered by the media\nWarning: package 'RcolorBrewer' is not available for this version of R\n\nA version of this package for your version of R might be available elsewhere,\nsee the ideas at\nhttps://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages\n\n\nWarning: Perhaps you meant 'RColorBrewer' ?\n\n\nWarning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/4.3:\n  cannot open URL 'http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/4.3/PACKAGES'\n\n\nWarning: 'BiocManager' not available.  Could not check Bioconductor.\n\nPlease use `install.packages('BiocManager')` and then retry.\n\n\nWarning in p_install(package, character.only = TRUE, ...):\n\n\nWarning in library(package, lib.loc = lib.loc, character.only = TRUE,\nlogical.return = TRUE, : there is no package called 'RcolorBrewer'\n\n\nWarning in pacman::p_load(rio, here, plotly, ggvis, janitor, lattice, RcolorBrewer, : Failed to install/load:\nRcolorBrewer"
   },
   {
-    "objectID": "posts/First post/index.html",
-    "href": "posts/First post/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+    "objectID": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-in-newspapers-2021-2023",
+    "href": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-in-newspapers-2021-2023",
+    "title": "Trends of Road Traffic Accidents",
+    "section": "Trend of Total Accidents Reported in Newspapers, 2021-2023,",
+    "text": "Trend of Total Accidents Reported in Newspapers, 2021-2023,\n\n\n\n\n\n\n\n\n\n##Trend of Total Accidents by Month\n\n#MONTH==========================================================================\n# Group by month, and count number of accidents========================\naccidents_by_month &lt;- df_m_y %&gt;%\n  group_by(month) %&gt;%\n  summarise(total_accidents = n()) %&gt;%\n  na.omit()\n\n\n# Define the start and end months for the highlighted box\nhighlight_start &lt;- 11\nhighlight_end &lt;- 12    \n\n# Plot line graph faceted by year\nggplot(accidents_by_month, aes(x = month, y = total_accidents)) +\n  geom_line(color = '#FF5733', size = 1) +\n  geom_point(color = 'darkred', size = 2.5)+\n  labs(x = \"Month\", y = \"Total Accidents\", title = \"Total Accidents by Month and Year\") +\n  scale_x_continuous(breaks = 1:12, labels = month.abb) +  # Use month abbreviations on x-axis\n  theme_light() +\n  #facet_wrap(~ year, ncol = 1) +  # Facet by year\n  geom_rect(aes(xmin = highlight_start - 0.5, xmax = highlight_end + 0.5, ymin = -Inf, ymax = Inf), fill = \"red\", alpha = 0.02) +\n  annotate(\"text\", x = (highlight_start + highlight_end) / 2, y = max(accidents_by_month$total_accidents), \n           label = \"Increase\", vjust = -0.07, hjust = 0.5, size = 4)+\n  geom_vline(xintercept = 5, linetype = \"dashed\", color = \"blue\", size = 2,\n             label = 'Increase in accidents', alpha = 0.8)\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning in geom_vline(xintercept = 5, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`"
+  },
+  {
+    "objectID": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-by-month-faceted-by-year",
+    "href": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-by-month-faceted-by-year",
+    "title": "Trends of Road Traffic Accidents",
+    "section": "Trend of Total Accidents Reported by Month Faceted by Year",
+    "text": "Trend of Total Accidents Reported by Month Faceted by Year\n\n\n`summarise()` has grouped output by 'year'. You can override using the\n`.groups` argument.\n\n\nWarning in geom_vline(xintercept = 5, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`"
+  },
+  {
+    "objectID": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved",
+    "href": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved",
+    "title": "Trends of Road Traffic Accidents",
+    "section": "Total Number of Accidents Rported by Month by Type of Car Involved",
+    "text": "Total Number of Accidents Rported by Month by Type of Car Involved\n\n\n`summarise()` has grouped output by 'cars'. You can override using the\n`.groups` argument."
+  },
+  {
+    "objectID": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved-faceted-by-year",
+    "href": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved-faceted-by-year",
+    "title": "Trends of Road Traffic Accidents",
+    "section": "Total Number of Accidents Rported by Month by Type of Car Involved Faceted by Year",
+    "text": "Total Number of Accidents Rported by Month by Type of Car Involved Faceted by Year\n\n\n`summarise()` has grouped output by 'cars', 'month'. You can override using the\n`.groups` argument."
+  },
+  {
+    "objectID": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-reported-by-time-of-occurence",
+    "href": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-reported-by-time-of-occurence",
+    "title": "Trends of Road Traffic Accidents",
+    "section": "Total Number of Accidents Reported by Time of Occurence",
+    "text": "Total Number of Accidents Reported by Time of Occurence\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'time'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'time'. You can override using the\n`.groups` argument.\n\n\nWarning in geom_vline(xintercept = 6, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'time', 'type_of_accident'. You can\noverride using the `.groups` argument.\n\n\nWarning in geom_vline(xintercept = 6, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_night'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_of_week'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_of_week'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_of_week', 'time'. You can override\nusing the `.groups` argument."
   },
   {
     "objectID": "index.html",
@@ -25,7 +53,7 @@
     "href": "archive.html",
     "title": "archive",
     "section": "",
-    "text": "Trends of Road Traffic Accidents\n\n\n\n\n\n\n\n\nMay 24, 2024\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\n\n\nMay 13, 2024\n\n\n\n\n\n\n\nProcess of data aquisition and model building\n\n\n\n\n\n\n\n\nMay 13, 2024\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\nMay 10, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Trends of Road Traffic Accidents\n\n\n\n\n\n\n\n\nMay 24, 2024\n\n\n\n\n\n\n\nProcess of data aquisition and model building\n\n\n\n\n\n\n\n\nMay 13, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog.html",
@@ -39,7 +67,7 @@
     "href": "posts/data aquisition process/accident-data-aquisition.html",
     "title": "Process of data aquisition and model building",
     "section": "",
-    "text": "In Uganda, road traffic accidents pose a significant challenge, with a high number of fatalities reported on a weekly basis. The Uganda police issues a weekly crime report that includes data on road crashes. However, these reports often lack the necessary details to fully understand the nature and severity of the accidents. This blog aims to use publicly available unstructured data from newspaper articles to get a nuanced picture of what, when, and critical aspects of road accidents to identify hot-spots for targeted actions to enhance road safety.\n\n\n\n\n\n\n{#fig-police report}\n\n\n\n\n\nNatural Language Processing (NLP), a sub-field of Artificial Intelligence, offers an exciting opportunity to extract structured data from text to create a structured database. NLP can be trained to understand human language, enabling the extraction of valuable information from newspaper articles for further analysis. To delve deeper into NLP, you can read more about it in the article Natural Language Processing. In my own exploration of NLP, I utilized its capabilities by training a custom entity recognition model. This model allowed me to extract specific data from newspaper articles, making it easier to analyze and derive insights. To learn more about Named Entity Recognition (NER), which is a fundamental technique in NLP, you can refer to the article Named Entity Recognition."
+    "text": "Road traffic accidents accidents in Uganda pose a significant challenge, with a high number of fatalities reported every week. The Uganda police issues a weekly crime report that includes data on road crashes. However, these reports often lack the necessary details to fully understand the nature and severity of the accidents. This blog aims to use publicly available unstructured data from newspaper articles to get a nuanced picture of what, when, and critical aspects of road accidents to identify hot-spots for targeted actions to enhance road safety.\n\n\n\n\n\n\n{#fig-police report}\n\n\n\n\n\nNatural Language Processing (NLP), a sub-field of Artificial Intelligence, offers an exciting opportunity to extract structured data from text to create a structured database. NLP can be trained to understand human language, enabling the extraction of valuable information from newspaper articles for further analysis. To delve deeper into NLP, you can read more about it in the article Natural Language Processing. In my own exploration of NLP, I utilized its capabilities by training a custom entity recognition model. This model allowed me to extract specific data from newspaper articles, making it easier to analyze and derive insights. To learn more about Named Entity Recognition (NER), which is a fundamental technique in NLP, you can refer to the article Named Entity Recognition."
   },
   {
     "objectID": "posts/data aquisition process/accident-data-aquisition.html#opportunity-of-using-artificial-intelligenceai-to-extract-newspaper-articles",
@@ -96,47 +124,5 @@
     "title": "Process of data aquisition and model building",
     "section": "Implications",
     "text": "Implications\nThe study’s insights on Named Entity Recognition (NER) performance in text mining have broad implications across various applications:\n\nInformation Extraction: Accurate NER enhances information extraction from unstructured text, benefiting tasks like news summarization, document analysis, and knowledge graph construction.\nKnowledge Discovery: NER facilitates knowledge discovery by identifying and categorizing entities, supporting tasks such as trend analysis, market research, and social network analysis.\nSearch and Recommendation Systems: Integrating NER improves search and recommendation system accuracy by understanding user queries or preferences and providing targeted results.\nText Classification and Sentiment Analysis: NER contributes to text classification and sentiment analysis by identifying important entities, leading to more precise insights from text data.\nNatural Language Understanding and Conversational AI: NER enhances natural language understanding and conversational AI systems by recognizing entities in user input, enabling better context understanding and response generation.\nData Integration and Linkage: NER aids data integration and linkage by identifying entities across datasets, supporting tasks like data harmonization and entity resolution for a unified data view.\nNER as a Service: The study’s findings may lead to NER-as-a-service offerings, enabling organizations to leverage pre-trained NER models or APIs for streamlined integration into various systems and workflows."
-  },
-  {
-    "objectID": "posts/Trend of Road Traffic Accidents/index.html",
-    "href": "posts/Trend of Road Traffic Accidents/index.html",
-    "title": "Trends of Road Traffic Accidents",
-    "section": "",
-    "text": "Note\n\n\n\nThis blog utilizes accident data sourced from daily newspapers. It does not aim to substitute or dispute official police traffic reports. Instead, it aims to complement the existing narrative by providing additional context to the road traffic accident reports disseminated by the media. As such, any interpretation of these findings should be done with this context in mind.This monthly blog therefore seeks to provide patterns of major accidents on highways, given that the majority of such incidents are covered by the media\nWarning: package 'RcolorBrewer' is not available for this version of R\n\nA version of this package for your version of R might be available elsewhere,\nsee the ideas at\nhttps://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages\n\n\nWarning: Perhaps you meant 'RColorBrewer' ?\n\n\nWarning: unable to access index for repository http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/4.3:\n  cannot open URL 'http://www.stats.ox.ac.uk/pub/RWin/bin/windows/contrib/4.3/PACKAGES'\n\n\nWarning: 'BiocManager' not available.  Could not check Bioconductor.\n\nPlease use `install.packages('BiocManager')` and then retry.\n\n\nWarning in p_install(package, character.only = TRUE, ...):\n\n\nWarning in library(package, lib.loc = lib.loc, character.only = TRUE,\nlogical.return = TRUE, : there is no package called 'RcolorBrewer'\n\n\nWarning in pacman::p_load(rio, here, plotly, ggvis, janitor, lattice, RcolorBrewer, : Failed to install/load:\nRcolorBrewer"
-  },
-  {
-    "objectID": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-in-newspapers-2021-2023",
-    "href": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-in-newspapers-2021-2023",
-    "title": "Trends of Road Traffic Accidents",
-    "section": "Trend of Total Accidents Reported in Newspapers, 2021-2023,",
-    "text": "Trend of Total Accidents Reported in Newspapers, 2021-2023,\n\n\n\n\n\n\n\n\n\n##Trend of Total Accidents by Month\n\n#MONTH==========================================================================\n# Group by month, and count number of accidents========================\naccidents_by_month &lt;- df_m_y %&gt;%\n  group_by(month) %&gt;%\n  summarise(total_accidents = n()) %&gt;%\n  na.omit()\n\n\n# Define the start and end months for the highlighted box\nhighlight_start &lt;- 11\nhighlight_end &lt;- 12    \n\n# Plot line graph faceted by year\nggplot(accidents_by_month, aes(x = month, y = total_accidents)) +\n  geom_line(color = '#FF5733', size = 1) +\n  geom_point(color = 'darkred', size = 2.5)+\n  labs(x = \"Month\", y = \"Total Accidents\", title = \"Total Accidents by Month and Year\") +\n  scale_x_continuous(breaks = 1:12, labels = month.abb) +  # Use month abbreviations on x-axis\n  theme_light() +\n  #facet_wrap(~ year, ncol = 1) +  # Facet by year\n  geom_rect(aes(xmin = highlight_start - 0.5, xmax = highlight_end + 0.5, ymin = -Inf, ymax = Inf), fill = \"red\", alpha = 0.02) +\n  annotate(\"text\", x = (highlight_start + highlight_end) / 2, y = max(accidents_by_month$total_accidents), \n           label = \"Increase\", vjust = -0.07, hjust = 0.5, size = 4)+\n  geom_vline(xintercept = 5, linetype = \"dashed\", color = \"blue\", size = 2,\n             label = 'Increase in accidents', alpha = 0.8)\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\nWarning in geom_vline(xintercept = 5, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`"
-  },
-  {
-    "objectID": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-by-month-faceted-by-year",
-    "href": "posts/Trend of Road Traffic Accidents/index.html#trend-of-total-accidents-reported-by-month-faceted-by-year",
-    "title": "Trends of Road Traffic Accidents",
-    "section": "Trend of Total Accidents Reported by Month Faceted by Year",
-    "text": "Trend of Total Accidents Reported by Month Faceted by Year\n\n\n`summarise()` has grouped output by 'year'. You can override using the\n`.groups` argument.\n\n\nWarning in geom_vline(xintercept = 5, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`"
-  },
-  {
-    "objectID": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved",
-    "href": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved",
-    "title": "Trends of Road Traffic Accidents",
-    "section": "Total Number of Accidents Rported by Month by Type of Car Involved",
-    "text": "Total Number of Accidents Rported by Month by Type of Car Involved\n\n\n`summarise()` has grouped output by 'cars'. You can override using the\n`.groups` argument."
-  },
-  {
-    "objectID": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved-faceted-by-year",
-    "href": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-rported-by-month-by-type-of-car-involved-faceted-by-year",
-    "title": "Trends of Road Traffic Accidents",
-    "section": "Total Number of Accidents Rported by Month by Type of Car Involved Faceted by Year",
-    "text": "Total Number of Accidents Rported by Month by Type of Car Involved Faceted by Year\n\n\n`summarise()` has grouped output by 'cars', 'month'. You can override using the\n`.groups` argument."
-  },
-  {
-    "objectID": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-reported-by-time-of-occurence",
-    "href": "posts/Trend of Road Traffic Accidents/index.html#total-number-of-accidents-reported-by-time-of-occurence",
-    "title": "Trends of Road Traffic Accidents",
-    "section": "Total Number of Accidents Reported by Time of Occurence",
-    "text": "Total Number of Accidents Reported by Time of Occurence\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'time'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'time'. You can override using the\n`.groups` argument.\n\n\nWarning in geom_vline(xintercept = 6, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'time', 'type_of_accident'. You can\noverride using the `.groups` argument.\n\n\nWarning in geom_vline(xintercept = 6, linetype = \"dashed\", color = \"blue\", :\nIgnoring unknown parameters: `label`\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_night'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_of_week'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_of_week'. You can override using the\n`.groups` argument.\n\n\n\n\n\n\n\n\n\n\n\n`summarise()` has grouped output by 'day_of_week', 'time'. You can override\nusing the `.groups` argument."
   }
 ]

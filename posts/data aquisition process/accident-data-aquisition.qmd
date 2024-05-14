@@ -14,11 +14,10 @@ image: "ner.png"
 
 # Introduction
 
-In Uganda, road traffic accidents pose a significant challenge, with a high number of fatalities reported on a weekly basis. The Uganda police issues a weekly crime report that includes data on road crashes. However, these reports often lack the necessary details to fully understand the nature and severity of the accidents. This blog aims to use publicly available unstructured data from newspaper articles to get a nuanced picture of what, when, and critical aspects of road accidents to identify hot-spots for targeted actions to enhance road safety.
+Road traffic accidents accidents in Uganda pose a significant challenge, with a high number of fatalities reported every week. The Uganda police issues a weekly crime report that includes data on road crashes. However, these reports often lack the necessary details to fully understand the nature and severity of the accidents. This blog aims to use publicly available unstructured data from newspaper articles to get a nuanced picture of what, when, and critical aspects of road accidents to identify hot-spots for targeted actions to enhance road safety.
 
 ::: {layout-ncol="1"}
-
-![Police accident report](pictures/police report.jpg){#fig-police report}
+![Police accident report](pictures/police%20report.jpg){#fig-police report}
 :::
 
 ## Opportunity of using Artificial Intelligence(AI) to Extract Newspaper Articles
@@ -26,38 +25,34 @@ In Uganda, road traffic accidents pose a significant challenge, with a high numb
 Natural Language Processing (NLP), a sub-field of Artificial Intelligence, offers an exciting opportunity to extract structured data from text to create a structured database. NLP can be trained to understand human language, enabling the extraction of valuable information from newspaper articles for further analysis. To delve deeper into NLP, you can read more about it in the article [Natural Language Processing](https://hbr.org/2022/04/the-power-of-natural-language-processing). In my own exploration of NLP, I utilized its capabilities by training a custom entity recognition model. This model allowed me to extract specific data from newspaper articles, making it easier to analyze and derive insights. To learn more about Named Entity Recognition (NER), which is a fundamental technique in NLP, you can refer to the article [Named Entity Recognition](https://www.geeksforgeeks.org/named-entity-recognition/).
 
 ::: {layout-ncol="2"}
-![Accident Newspaper article](pictures/newspaper article.png){#fig-article}
-![An annotated Newspaper article using NER](pictures/ner.png){#fig-NLP}
+![Accident Newspaper article](pictures/newspaper%20article.png){#fig-article} ![An annotated Newspaper article using NER](pictures/ner.png){#fig-NLP}
 :::
 
 # Process of Data Aquisition and Model Training
 
 ## Custom NER model training
 
-The schemer shows the nine step process of data aquisition and model training. 
+The schemer shows the nine step process of data aquisition and model training.
 
-::: {layout-ncol="1"} 
-![Process of Custom NER model training](pictures/process of data.png){#fig-process} 
+::: {layout-ncol="1"}
+![Process of Custom NER model training](pictures/process%20of%20data.png){#fig-process}
 :::
-
 
 ## How Named Entity Recognition Works
 
-NER uses pretrained Large Language Models(LLMs) that are trained on universal entites as shown in the schemer below. However, since LLMs are trained on general corpus of text that may include Wikipedia, it may perform poorly on specific tasks like identifying road traffic variables in a country like Uganda. Becuase of this limitation, I therefore customised the pretrained LLM by training it using a corpus of annotated Ugandan newspaper articles reporting accidents. For more information on LLMs, please refer to [LLMs](https://aws.amazon.com/what-is/large-language-model/). 
+NER uses pretrained Large Language Models(LLMs) that are trained on universal entites as shown in the schemer below. However, since LLMs are trained on general corpus of text that may include Wikipedia, it may perform poorly on specific tasks like identifying road traffic variables in a country like Uganda. Becuase of this limitation, I therefore customised the pretrained LLM by training it using a corpus of annotated Ugandan newspaper articles reporting accidents. For more information on LLMs, please refer to [LLMs](https://aws.amazon.com/what-is/large-language-model/).
 
-::: {layout-ncol="1"} 
-![Process of Custom NER works](pictures/ner process.png){#fig-ner process} 
+::: {layout-ncol="1"}
+![Process of Custom NER works](pictures/ner%20process.png){#fig-ner process}
 :::
-
 
 ## Process of annotation to fine tune the LLM
 
-I used a free online annotation tool called [tecoholic](ic.github.io/ner-annotator/) to annotate 21 variables of interest using 150 newspaper articles that reported road traffic accidents in 2021. The trained model was the used to extract key variables from 300 newspaper articles from 2021 to 2023 
+I used a free online annotation tool called [tecoholic](ic.github.io/ner-annotator/) to annotate 21 variables of interest using 150 newspaper articles that reported road traffic accidents in 2021. The trained model was the used to extract key variables from 300 newspaper articles from 2021 to 2023
 
-::: {layout-ncol="1"} 
-![Process of annotation](pictures/annotation.png){#fig-annotation} 
+::: {layout-ncol="1"}
+![Process of annotation](pictures/annotation.png){#fig-annotation}
 :::
-
 
 # Training Results
 
@@ -71,20 +66,15 @@ The model performed well on unseen newspaper articles averaging 70% performance 
 
 3.  **ENTS_F: *F1 score for named entities:*** measure of the model's accuracy in identifying named entities, considering both precision and recall. Higher values indicate better performance.
 
-4.  **SCORE: *Represents an overall score:*** that combines multiple metrics to evaluate the performance of the NER pipeline. Higher values indicate better overall performance. 
+4.  **SCORE: *Represents an overall score:*** that combines multiple metrics to evaluate the performance of the NER pipeline. Higher values indicate better overall performance.
 
-::: {layout-ncol="1"} 
-![Model training results](pictures/results.png) 
+::: {layout-ncol="1"}
+![Model training results](pictures/results.png)
 :::
-
 
 ## Model deployment
 
-The final process was deployement of the model to 300 newspaper articles on road traffic accidents to obtain a structured dataset. 
-::: {layout-ncol="1"} 
-![Model deployment](pictures/deployment.png) 
-:::
-
+The final process was deployement of the model to 300 newspaper articles on road traffic accidents to obtain a structured dataset. ::: {layout-ncol="1"} ![Model deployment](pictures/deployment.png) :::
 
 # Conclusion
 

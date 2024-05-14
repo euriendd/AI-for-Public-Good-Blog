@@ -2,6 +2,10 @@
 title: "Trends of Road Traffic Accidents"
 author: "Daniel Eurien"
 date: "2024-05-24"
+execute: 
+  message: false
+  warning: false
+  echo: false
 categories: [news]
 image: "accident.png"
 ---
@@ -12,14 +16,13 @@ This blog utilizes accident data sourced from daily newspapers. It does not aim 
 
 ```{r}
 #| echo: false
-#| 
+#| warning: false
 pacman::p_load(rio, 
                here,
                plotly,
                ggvis,
                janitor,
                lattice,
-               RcolorBrewer,
                gridExtra,
                tidyverse, 
                magrittr, 
@@ -70,7 +73,9 @@ The figure below indicates the availability of variables of interest as reported
 
 ```{r}
 #| echo: false
-
+#| warning: false
+#| fig-cap: "Polar axis plot"
+#| fig-alt: "A line plot on a polar axis"
 # Select columns from "title" to "day_night" and count null values
 null_counts <- df_clean |> 
   select(title:day_night) |> 
@@ -131,10 +136,12 @@ ggplot(plot_data_long, aes(x = fct_reorder(variable, proportion), y = proportion
 ```
 
 # Trend in Road Traffic Accidents
-## Trend of Total Accidents Reported in Newspapers, 2021-2023,
 
+## Trend of Total Accidents Reported in Newspapers, 2021-2023,
+Nwespapers reported an average of 96 road crushes on highways over the 3 years under study.
 ```{r}
 #| echo: false
+#| warning: false
   #Accidents by month=============================================================
 
 #Create month from publish date ------------------------------------------------
@@ -177,8 +184,12 @@ ggplot(accidents_by_year, aes(x = factor(year), y = total_accidents, fill = fact
   guides(fill = FALSE)
 ```
 
-##Trend of Total Accidents by Month
+## Trend of Total Accidents by Month
+There is an overall spike in the number of  accidents were reported in May followed by November to December period.
+
 ```{r}
+#| echo: false
+#| warning: false
 #MONTH==========================================================================
 # Group by month, and count number of accidents========================
 accidents_by_month <- df_m_y %>%
@@ -206,10 +217,12 @@ ggplot(accidents_by_month, aes(x = month, y = total_accidents)) +
              label = 'Increase in accidents', alpha = 0.8)
 ```
 
-
 ## Trend of Total Accidents Reported by Month Faceted by Year
+There is a consistent marginal increase in road crushes reported by newspapers in May in all the 3 years under study.
+
 ```{r}
 #| echo: false
+#| warning: false
 #YEAR_MONTH=====================================================================
 # Group by year and month, and count number of accidents========================
 accidents_by_year_month <- df_m_y %>%
@@ -237,8 +250,11 @@ ggplot(accidents_by_year_month, aes(x = month, y = total_accidents)) +
 ```
 
 ## Total Number of Accidents Rported by Month by Type of Car Involved
+Trucks registered the highest number of accidents consistent reported by newspapers over the 12 months of year.
+
 ```{r}
 #| echo: false
+#| warning: false
 #Accident by type of car =======================================================
 accidents_cars <- df_m_y %>%
   group_by(cars, month) %>%
@@ -254,10 +270,12 @@ ggplot(accidents_cars, aes(x = month, y = factor(cars), fill = total_accidents))
   theme_light()
 ```
 
+## Total Number of Accidents Reported by Month by Type of Car Involved Faceted by Year
+Trucks registered the highest number of accidents consistent reported by newspapers over the 12 months of year in all the 3 years of study.
 
-## Total Number of Accidents Rported by Month by Type of Car Involved Faceted by Year
 ```{r}
 #| echo: false
+#| warning: false
 #Group by year and facet by year------------------------------------------------
 accidents_cars_f <- df_m_y %>%
   group_by(cars, month, year) %>%
@@ -273,13 +291,13 @@ ggplot(accidents_cars_f, aes(x = month, y = factor(cars), fill = total_accidents
   facet_wrap(~ year, ncol = 1)
 ```
 
-
-
 # Time Analysis
-## Total Number of Accidents Reported by Time of Occurence
 
+## Total Number of Accidents Reported by Time of Occurence
+The highest proportion of accidents reported happened at 6 am in the morning.
 ```{r}
 #| echo: false
+#| warning: false
 #TIME===========================================================================
 #Group by year and facet by year------------------------------------------------
 accidents_cars_t <- df_m_y %>%
@@ -299,9 +317,11 @@ ggplot(accidents_cars_t, aes(x = factor(time), y = total_accidents, fill = facto
   guides(fill = FALSE)
 ```
 
-
+## Total Number of Accidents Reported by Time of Occurence by car type
+Accidents occured most at 6am, this was consistent for most of the car types. Trucks had the highest number of road crushes happening at 6 am in the morning followed by Private cars
 ```{r}
 #| echo: false
+#| warning: false
   #Facet by car type--------------------------------------------------------------
 accidents_cars_fa <- df_m_y %>%
   group_by(time, cars) %>%
@@ -321,8 +341,8 @@ ggplot(accidents_cars_fa, aes(x = factor(time), y = total_accidents, fill = fact
   facet_wrap(~ cars, ncol = 2)
 ```
 
-
-
+## Total Number of Accidents by month and accident type
+Most accidents happened at 6 am in the morning with cars overturning being the commonest type of accident. Atleast all accident type registered atleast 1 accident at 6 am in the morning.
 ```{r}
 #| echo: false
   #Facet by type of accident------------------------------------------------------
@@ -342,10 +362,12 @@ ggplot(accidents_cars_at, aes(x = time, y = factor(type_of_accident), fill = tot
   
 ```
 
-
+## Total Number of Accidents by month and accident type over the three years
+Generally, most accidents happened at 6 am in the morning. Cars overturning was the most type of accident reported at 6 am over the 3 years under study.
 
 ```{r}
 #| echo: false
+#| warning: false
   #Facet by year------------------------------------------------------------------
 #Facet by type of accident------------------------------------------------------
 accidents_cars_at_yr <- df_m_y %>%
@@ -365,9 +387,13 @@ ggplot(accidents_cars_at_yr, aes(x = time, y = factor(type_of_accident), fill = 
 
 ```
 
+## Total Number of Accidents by type and time of day
+
+Generally most ***head on collisions*** and cars ***ramming onto stationary trucks*** happened at night
 
 ```{r}
 #| echo: false
+#| warning: false
   #NIGHT-DAY======================================================================
 accidents_day_night <- df_clean %>%
   group_by(day_night, type_of_accident) %>%
@@ -415,6 +441,9 @@ ggplot(accidents_day_night, aes(x = fct_reorder(type_of_accident, total_accident
 
 ```
 
+## Total Number of Accidents by day of week
+
+Generally more road crushed were reported on Monday and Tuesday, with the least number of road crushes reported on a Saturday.
 
 ```{r}
 #| echo: false
@@ -452,6 +481,9 @@ ggplot(accidents_day, aes(x = day_of_week, y = total_accidents, fill = factor(to
   scale_y_continuous(expand = c(0, 0))
 ```
 
+## Total Number of Accidents by day of week and time of day
+
+Most road crushes reported by newspapers occured on a Monday monrning.
 
 ```{r}
 #| echo: false
@@ -486,6 +518,7 @@ ggplot(accidents_day_time, aes(x = time, y = day_of_week, fill = total_accidents
 
 ```
 
+## Total Number of Accidents by day of week over the three years
 
 ```{r}
 #| echo: false
@@ -525,9 +558,13 @@ ggplot(accidents_day_year, aes(x = day_of_week, y = total_accidents, fill = fact
   scale_y_continuous(expand = c(0, 0))
 ```
 
+## Total Number of Accidents by day of week and time of day over the three years
+
+The prevalent occurrence of road crushes at 6 am in the morning is consistent over the three years under study. However, the consistency in days is only true on Monday mornings and spread ramdomly throught the days of the week when compared over the three years.
 
 ```{r}
 #| echo: false
+#| warning: false
   #Faceted by year================================================================
 accidents_day_time_y <- df_cleann %>%
   group_by(day_of_week, time, year) %>%
