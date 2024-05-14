@@ -138,7 +138,9 @@ ggplot(plot_data_long, aes(x = fct_reorder(variable, proportion), y = proportion
 # Trend in Road Traffic Accidents
 
 ## Trend of Total Accidents Reported in Newspapers, 2021-2023,
+
 Nwespapers reported an average of 96 road crushes on highways over the 3 years under study.
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -185,7 +187,8 @@ ggplot(accidents_by_year, aes(x = factor(year), y = total_accidents, fill = fact
 ```
 
 ## Trend of Total Accidents by Month
-There is an overall spike in the number of  accidents were reported in May followed by November to December period.
+
+There is an overall spike in the number of accidents were reported in May followed by November to December period.
 
 ```{r}
 #| echo: false
@@ -218,6 +221,7 @@ ggplot(accidents_by_month, aes(x = month, y = total_accidents)) +
 ```
 
 ## Trend of Total Accidents Reported by Month Faceted by Year
+
 There is a consistent marginal increase in road crushes reported by newspapers in May in all the 3 years under study.
 
 ```{r}
@@ -250,6 +254,7 @@ ggplot(accidents_by_year_month, aes(x = month, y = total_accidents)) +
 ```
 
 ## Total Number of Accidents Rported by Month by Type of Car Involved
+
 Trucks registered the highest number of accidents consistent reported by newspapers over the 12 months of year.
 
 ```{r}
@@ -271,6 +276,7 @@ ggplot(accidents_cars, aes(x = month, y = factor(cars), fill = total_accidents))
 ```
 
 ## Total Number of Accidents Reported by Month by Type of Car Involved Faceted by Year
+
 Trucks registered the highest number of accidents consistent reported by newspapers over the 12 months of year in all the 3 years of study.
 
 ```{r}
@@ -294,7 +300,9 @@ ggplot(accidents_cars_f, aes(x = month, y = factor(cars), fill = total_accidents
 # Time Analysis
 
 ## Total Number of Accidents Reported by Time of Occurence
+
 The highest proportion of accidents reported happened at 6 am in the morning.
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -318,7 +326,9 @@ ggplot(accidents_cars_t, aes(x = factor(time), y = total_accidents, fill = facto
 ```
 
 ## Total Number of Accidents Reported by Time of Occurence by car type
+
 Accidents occured most at 6am, this was consistent for most of the car types. Trucks had the highest number of road crushes happening at 6 am in the morning followed by Private cars
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -342,7 +352,9 @@ ggplot(accidents_cars_fa, aes(x = factor(time), y = total_accidents, fill = fact
 ```
 
 ## Total Number of Accidents by month and accident type
+
 Most accidents happened at 6 am in the morning with cars overturning being the commonest type of accident. Atleast all accident type registered atleast 1 accident at 6 am in the morning.
+
 ```{r}
 #| echo: false
   #Facet by type of accident------------------------------------------------------
@@ -363,6 +375,7 @@ ggplot(accidents_cars_at, aes(x = time, y = factor(type_of_accident), fill = tot
 ```
 
 ## Total Number of Accidents by month and accident type over the three years
+
 Generally, most accidents happened at 6 am in the morning. Cars overturning was the most type of accident reported at 6 am over the 3 years under study.
 
 ```{r}
@@ -596,3 +609,27 @@ ggplot(accidents_day_time_y, aes(x = time, y = day_of_week, fill = total_acciden
     legend.text = element_text(size = 10)  # Adjust font size of legend labels
   )
 ```
+
+# Key Observations from the analysis
+
+1.  The average number of road crashes reported in newspapers over the three-year period was 96.
+
+2.  May and the November to December period showed a higher number of reported accidents.
+
+3.  Trucks consistently had the highest number of reported accidents throughout the year.
+
+4.  The majority of accidents reported occurred at 6 am in the morning.
+
+5.  Cars overturning was the most common type of accident reported at 6 am.
+
+# Recommendations for further study
+
+1.  Analyze the underlying causes and contributing factors for the spike in accidents during May and the November to December period.
+
+2.  Investigate the reasons behind the consistent high number of accidents involving trucks and explore potential measures to reduce their occurrence.
+
+3.  Examine the circumstances surrounding accidents occurring at 6 am to identify specific risk factors and develop targeted interventions.
+
+4.  Explore the patterns of head-on collisions and cars ramming into stationary trucks at night to understand the factors contributing to these types of accidents.
+
+5.  Investigate the reasons for the higher number of accidents reported on Mondays and Tuesdays, as well as the lower number on Saturdays, to identify potential factors influencing these trends.
