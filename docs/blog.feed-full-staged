@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Daniel Eurien</title>
+<link>https://DataSense-Consulting.com/blog.html</link>
+<atom:link href="https://DataSense-Consulting.com/blog.xml" rel="self" type="application/rss+xml"/>
+<description>This is Daniel Eurien&#39;s personal Blog</description>
+<generator>quarto-1.4.554</generator>
+<lastBuildDate>Thu, 23 May 2024 21:00:00 GMT</lastBuildDate>
+<item>
+  <title>{B4F502887207:/posts/Trend of Road Traffic Accidents/index.html}</title>
+  <dc:creator>Daniel Eurien</dc:creator>
+  <link>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/</link>
+  <description>{B4F502887207:/posts/Trend of Road Traffic Accidents/index.html}</description>
+  <category>news</category>
+  <guid>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/</guid>
+  <pubDate>Thu, 23 May 2024 21:00:00 GMT</pubDate>
+  <media:content url="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/accident.png" medium="image" type="image/png" height="86" width="144"/>
+</item>
+<item>
+  <title>{B4F502887207:/posts/data aquisition process/accident-data-aquisition.html}</title>
+  <dc:creator>Daniel Eurien</dc:creator>
+  <link>https://DataSense-Consulting.com/posts/data aquisition process/accident-data-aquisition.html</link>
+  <description>{B4F502887207:/posts/data aquisition process/accident-data-aquisition.html}</description>
+  <category>123</category>
+  <category>Second Tag</category>
+  <guid>https://DataSense-Consulting.com/posts/data aquisition process/accident-data-aquisition.html</guid>
+  <pubDate>Sun, 12 May 2024 21:00:00 GMT</pubDate>
+  <media:content url="https://DataSense-Consulting.com/posts/data aquisition process/ner.png" medium="image" type="image/png" height="45" width="144"/>
+</item>
+</channel>
+</rss>
