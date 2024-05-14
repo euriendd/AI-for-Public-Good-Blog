@@ -1,0 +1,111 @@
+---
+title: "Process of data aquisition and model building"
+author: "Daniel Eurien"
+date: "2024-05-13"
+categories: ['123', 'Second Tag']
+description: 'We used a corpus of 300 local newspaper articles'
+execute: 
+  message: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+image: "image.jpg"
+---
+
+# Introduction
+
+In Uganda, road traffic accidents pose a significant challenge, with a high number of fatalities reported on a weekly basis. The Uganda police issues a weekly crime report that includes data on road crashes. However, these reports often lack the necessary details to fully understand the nature and severity of the accidents. This blog aims to use publicly available unstructured data from newspaper articles to get a nuanced picture of what, when, and critical aspects of road accidents to identify hot-spots for targeted actions to enhance road safety.
+
+::: {layout-ncol="1"}
+
+![Police accident report](pictures/police report.jpg){#fig-police report}
+:::
+
+## Opportunity of using Artificial Intelligence(AI) to Extract Newspaper Articles
+
+Natural Language Processing (NLP), a sub-field of Artificial Intelligence, offers an exciting opportunity to extract structured data from text to create a structured database. NLP can be trained to understand human language, enabling the extraction of valuable information from newspaper articles for further analysis. To delve deeper into NLP, you can read more about it in the article [Natural Language Processing](https://hbr.org/2022/04/the-power-of-natural-language-processing). In my own exploration of NLP, I utilized its capabilities by training a custom entity recognition model. This model allowed me to extract specific data from newspaper articles, making it easier to analyze and derive insights. To learn more about Named Entity Recognition (NER), which is a fundamental technique in NLP, you can refer to the article [Named Entity Recognition](https://www.geeksforgeeks.org/named-entity-recognition/).
+
+::: {layout-ncol="2"}
+![Accident Newspaper article](pictures/newspaper article.png){#fig-article}
+![An annotated Newspaper article using NER](pictures/ner.png){#fig-NLP}
+:::
+
+# Process of Data Aquisition and Model Training
+
+## Custom NER model training
+
+The schemer shows the nine step process of data aquisition and model training. 
+
+::: {layout-ncol="1"} 
+![Process of Custom NER model training](pictures/process of data.png){#fig-process} 
+:::
+
+
+## How Named Entity Recognition Works
+
+NER uses pretrained Large Language Models(LLMs) that are trained on universal entites as shown in the schemer below. However, since LLMs are trained on general corpus of text that may include Wikipedia, it may perform poorly on specific tasks like identifying road traffic variables in a country like Uganda. Becuase of this limitation, I therefore customised the pretrained LLM by training it using a corpus of annotated Ugandan newspaper articles reporting accidents. For more information on LLMs, please refer to [LLMs](https://aws.amazon.com/what-is/large-language-model/). 
+
+::: {layout-ncol="1"} 
+![Process of Custom NER works](pictures/ner process.png){#fig-ner process} 
+:::
+
+
+## Process of annotation to fine tune the LLM
+
+I used a free online annotation tool called [tecoholic](ic.github.io/ner-annotator/) to annotate 21 variables of interest using 150 newspaper articles that reported road traffic accidents in 2021. The trained model was the used to extract key variables from 300 newspaper articles from 2021 to 2023 
+
+::: {layout-ncol="1"} 
+![Process of annotation](pictures/annotation.png){#fig-annotation} 
+:::
+
+
+# Training Results
+
+## Performance of the model
+
+The model performed well on unseen newspaper articles averaging 70% performance across all metrics:
+
+1.  **ENTS_P: *Precision score for named entities:*** measures the proportion of correctly identified named entities out of all predicted named entities. Higher values indicate better precision.
+
+2.  **ENTS_R: *Recall score for named entities:*** Recall measures the proportion of correctly identified named entities out of all actual named entities. Higher values indicate better recall.
+
+3.  **ENTS_F: *F1 score for named entities:*** measure of the model's accuracy in identifying named entities, considering both precision and recall. Higher values indicate better performance.
+
+4.  **SCORE: *Represents an overall score:*** that combines multiple metrics to evaluate the performance of the NER pipeline. Higher values indicate better overall performance. 
+
+::: {layout-ncol="1"} 
+![Model training results](pictures/results.png) 
+:::
+
+
+## Model deployment
+
+The final process was deployement of the model to 300 newspaper articles on road traffic accidents to obtain a structured dataset. 
+::: {layout-ncol="1"} 
+![Model deployment](pictures/deployment.png) 
+:::
+
+
+# Conclusion
+
+## Results from the analysis
+
+To view the results from this analysis, please refer to a separate blog on
+
+## Implications
+
+The study's insights on Named Entity Recognition (NER) performance in text mining have broad implications across various applications:
+
+1.  **Information Extraction:** Accurate NER enhances information extraction from unstructured text, benefiting tasks like news summarization, document analysis, and knowledge graph construction.
+
+2.  **Knowledge Discovery:** NER facilitates knowledge discovery by identifying and categorizing entities, supporting tasks such as trend analysis, market research, and social network analysis.
+
+3.  **Search and Recommendation Systems:** Integrating NER improves search and recommendation system accuracy by understanding user queries or preferences and providing targeted results.
+
+4.  **Text Classification and Sentiment Analysis:** NER contributes to text classification and sentiment analysis by identifying important entities, leading to more precise insights from text data.
+
+5.  **Natural Language Understanding and Conversational AI:** NER enhances natural language understanding and conversational AI systems by recognizing entities in user input, enabling better context understanding and response generation.
+
+6.  **Data Integration and Linkage:** NER aids data integration and linkage by identifying entities across datasets, supporting tasks like data harmonization and entity resolution for a unified data view.
+
+7.  **NER as a Service:** The study's findings may lead to NER-as-a-service offerings, enabling organizations to leverage pre-trained NER models or APIs for streamlined integration into various systems and workflows.

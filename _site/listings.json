@@ -1,0 +1,18 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/data aquisition process/accident-data-aquisition.html",
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/posts/data aquisition process/accident-data-aquisition.html",
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  }
+]

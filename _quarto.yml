@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Daniel Eurien"
+  site-url: https://DataSense-Consulting.com
+  description: "This is Daniel Eurien's personal Blog"
+  navbar:
+    right:
+      - text: Blog
+        href: blog.qmd
+      - icon: github
+        href: https://github.com/euriendd
+      - icon: twitter
+        href: https://twitter.com/DEurien
+      - icon: portfolio
+        href: https://eportfolio.mygreatlearning.com/daniel-eurien?utm_source=social&utm_medium=linkedin
+      - icon: linkein
+        href: https://www.linkedin.com/in/daniel-eurien-539a0965/
+format:
+  html:
+    theme: theme.scss
+    css: styles.css
+
+editor: visual
+

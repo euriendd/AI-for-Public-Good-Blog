@@ -1,0 +1,23 @@
+---
+page-layout: full
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6 #about-me-text}
+![](profile2.jpg)
+:::
+
+::: {.g-col-12 .g-col-md-6}
+# Hi, I'm Daniel Eurien.
+I am an Epidemiologist and Data Scientist passionate about integrating data science into public health and small-to-medium enterprises to drive profitability. I love data visualization, machine learning, and applying natural language processing in business intelligence. Through this blog, I share my impactful public good projects using my newly acquired skills.
+
+To get started, you can check out my most popular content below. You can find me on [Twitter](https://twitter.com/DEurien) or
+[GitHub](https://github.com/euriendd) and 
+[linkedin](https://www.linkedin.com/in/daniel-eurien-539a0965/). 
+Feel free to reach out to me via [mail](mailto:euriend56@gmail.com) and subscribe to my email newsletter.
+
+
+<iframe id="beehiiv-form" src="https://embeds.beehiiv.com/9232d2a2-6e85-4beb-b8ed-1de94e9e4f01?slim=true" data-test-id="beehiiv-embed" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent; height: 75px; width: 90%;"></iframe> 
+:::
+:::
