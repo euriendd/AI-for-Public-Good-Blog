@@ -10,7 +10,7 @@
 <atom:link href="https://DataSense-Consulting.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>This is Daniel Eurien&#39;s personal Blog</description>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Tue, 28 May 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 27 May 2024 21:00:00 GMT</lastBuildDate>
 <item>
   <title>Trends of Road Traffic Accidents - April 2024</title>
   <dc:creator>Daniel Eurien</dc:creator>
@@ -31,7 +31,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This blog utilizes accident data sourced from daily newspapers. It does not aim to substitute or dispute official police traffic reports. Instead, it aims to complement the existing narrative by providing additional context to the road traffic accident reports disseminated by the media. As such, any interpretation of these findings should be done with this context in mind.This monthly blog therefore seeks to provide patterns of major accidents on highways, given that the majority of such incidents are covered by the media</p>
+<p>This blog utilizes accident data sourced from daily newspapers. It does not aim to substitute or dispute official police traffic reports. Instead, it aims to complement the existing narrative by providing additional context to the road traffic accident reports disseminated by the media. As such, any interpretation of these findings should be done with this context in mind.This monthly blog therefore seeks to provide patterns of major accidents on highways, given that the majority of such incidents are covered by the media. The process of data extraction can be found in separate blog <a href="&quot;https://euriendd.github.io/AI-for-Public-Good-Blog/posts/data aquisition process/accident-data-aquisition.html&quot;">‘Process of data aquisition and model building’</a>.</p>
 </div>
 </div>
 <section id="data-completeness" class="level1">
@@ -51,8 +51,7 @@ Note
 <h1>Trend in Road Traffic Accidents</h1>
 <section id="trend-of-total-accidents-reported-in-newspapers-2021-2024" class="level2">
 <h2 class="anchored" data-anchor-id="trend-of-total-accidents-reported-in-newspapers-2021-2024">Trend of Total Accidents Reported in Newspapers, 2021-2024</h2>
-<p>The number of highway accidents reported in newspapers in the first quarter of 2024 is already one-third of the average over the past 3 years from 2021-2023, indicating a similar elevated trajectory in 2024.</p>
-<p>There is an overall spike in the number of accidents were reported in May followed by November to December period.</p>
+<p>The number of highway accidents reported in newspapers in the first one-third of 2024 is already one-third of the average over the past 3 years from 2021-2023, indicating a similar elevated trajectory in 2024.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -78,7 +77,7 @@ Note
 </section>
 <section id="trend-of-total-accidents-reported-by-month-faceted-by-year" class="level2">
 <h2 class="anchored" data-anchor-id="trend-of-total-accidents-reported-by-month-faceted-by-year">Trend of Total Accidents Reported by Month Faceted by Year</h2>
-<p>There is a consistent marginal increase in road crashes reported by newspapers in May in all 3 years between 2021 to 2023. However, this report only covers data up to April.</p>
+<p>There is a consistent marginal increase in road accidents reported by newspapers in May in all 3 years between 2021 to 2023. However, this report only covers data up to April.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -233,15 +232,25 @@ Note
 </div>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<ol type="1">
+<li>E<strong>levated accident trend:</strong> The number of highway accidents reported in newspapers in the first quarter of 2024 is already one-third of the average over the past 3 years, indicating a similar elevated trajectory in 2024.</li>
+<li><strong>Seasonal spikes:</strong> There are overall spikes in the number of accidents reported, with increases in May and the November-December period.</li>
+<li><strong>High truck involvement:</strong> Trucks consistently registered the highest number of accidents reported by newspapers over the 12-month period and across the 2021-2023 years.</li>
+<li><strong>Morning peak:</strong> The highest proportion of accidents occurred at 6 am, with trucks being the vehicle type most involved in crashes at this time.</li>
+<li><strong>Weekly patterns</strong>: More accidents were reported on Mondays and Tuesdays, with the least on Saturdays. The 6 am peak on Mondays was a consistent trend across the 2021-2023 period.</li>
+</ol>
+
+
 </section>
 
  ]]></description>
   <category>news</category>
   <guid>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april.html</guid>
-  <pubDate>Tue, 28 May 2024 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 27 May 2024 21:00:00 GMT</pubDate>
   <media:content url="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/acci.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -485,7 +494,7 @@ Note
  ]]></description>
   <category>news</category>
   <guid>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/trend.html</guid>
-  <pubDate>Fri, 24 May 2024 00:00:00 GMT</pubDate>
+  <pubDate>Thu, 23 May 2024 21:00:00 GMT</pubDate>
   <media:content url="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/accident.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
@@ -648,7 +657,7 @@ Figure&nbsp;2: Process of annotation
   <category>123</category>
   <category>Second Tag</category>
   <guid>https://DataSense-Consulting.com/posts/data aquisition process/accident-data-aquisition.html</guid>
-  <pubDate>Mon, 13 May 2024 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 12 May 2024 21:00:00 GMT</pubDate>
   <media:content url="https://DataSense-Consulting.com/posts/data aquisition process/ner.png" medium="image" type="image/png" height="45" width="144"/>
 </item>
 </channel>
