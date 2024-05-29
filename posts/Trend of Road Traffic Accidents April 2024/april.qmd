@@ -8,7 +8,7 @@ image: "acci.jpg"
 ---
 
 ::: callout-note
-This blog utilizes accident data sourced from daily newspapers. It does not aim to substitute or dispute official police traffic reports. Instead, it aims to complement the existing narrative by providing additional context to the road traffic accident reports disseminated by the media. As such, any interpretation of these findings should be done with this context in mind.This monthly blog therefore seeks to provide patterns of major accidents on highways, given that the majority of such incidents are covered by the media
+This blog utilizes accident data sourced from daily newspapers. It does not aim to substitute or dispute official police traffic reports. Instead, it aims to complement the existing narrative by providing additional context to the road traffic accident reports disseminated by the media. As such, any interpretation of these findings should be done with this context in mind.This monthly blog therefore seeks to provide patterns of major accidents on highways, given that the majority of such incidents are covered by the media. The process of data extraction can be found in separate blog ['Process of data aquisition and model building'](%22https://euriendd.github.io/AI-for-Public-Good-Blog/posts/data%20aquisition%20process/accident-data-aquisition.html%22).
 :::
 
 ```{r}
@@ -48,7 +48,8 @@ mutate(across(everything(), ~ifelse(. == "", NA, .)))
 ```
 
 # Data Completeness
-We only considered variables with >70% completeness for quantitative analysis. Meanwhile, variables with more than 30% missing data were analyzed qualitatively using natural language processing techniques, including word cloud analysis.
+
+We only considered variables with \>70% completeness for quantitative analysis. Meanwhile, variables with more than 30% missing data were analyzed qualitatively using natural language processing techniques, including word cloud analysis.
 
 ```{r}
 #| echo: false
@@ -116,9 +117,7 @@ ggplot(plot_data_long, aes(x = fct_reorder(variable, proportion), y = proportion
 
 ## Trend of Total Accidents Reported in Newspapers, 2021-2024
 
-The number of highway accidents reported in newspapers in the first quarter of 2024 is already one-third of the average over the past 3 years from 2021-2023, indicating a similar elevated trajectory in 2024.
-
-There is an overall spike in the number of accidents were reported in May followed by November to December period.
+The number of highway accidents reported in newspapers in the first one-third of 2024 is already one-third of the average over the past 3 years from 2021-2023, indicating a similar elevated trajectory in 2024.
 
 ```{r}
 #| echo: false
@@ -229,7 +228,7 @@ ggplot(accidents_by_month, aes(x = month, y = total_accidents)) +
 
 ## Trend of Total Accidents Reported by Month Faceted by Year
 
-There is a consistent marginal increase in road crashes reported by newspapers in May in all 3 years between 2021 to 2023. However, this report only covers data up to April.
+There is a consistent marginal increase in road accidents reported by newspapers in May in all 3 years between 2021 to 2023. However, this report only covers data up to April.
 
 ```{r}
 #| echo: false
@@ -734,4 +733,10 @@ labs(x = "Time",
 )
 ```
 
+# Summary
 
+1.  E**levated accident trend:** The number of highway accidents reported in newspapers in the first quarter of 2024 is already one-third of the average over the past 3 years, indicating a similar elevated trajectory in 2024.
+2.  **Seasonal spikes:** There are overall spikes in the number of accidents reported, with increases in May and the November-December period.
+3.  **High truck involvement:** Trucks consistently registered the highest number of accidents reported by newspapers over the 12-month period and across the 2021-2023 years.
+4.  **Morning peak:** The highest proportion of accidents occurred at 6 am, with trucks being the vehicle type most involved in crashes at this time.
+5.  **Weekly patterns**: More accidents were reported on Mondays and Tuesdays, with the least on Saturdays. The 6 am peak on Mondays was a consistent trend across the 2021-2023 period.
