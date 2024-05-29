@@ -10,7 +10,240 @@
 <atom:link href="https://DataSense-Consulting.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description>This is Daniel Eurien&#39;s personal Blog</description>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Thu, 23 May 2024 21:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 28 May 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Trends of Road Traffic Accidents - April 2024</title>
+  <dc:creator>Daniel Eurien</dc:creator>
+  <link>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This blog utilizes accident data sourced from daily newspapers. It does not aim to substitute or dispute official police traffic reports. Instead, it aims to complement the existing narrative by providing additional context to the road traffic accident reports disseminated by the media. As such, any interpretation of these findings should be done with this context in mind.This monthly blog therefore seeks to provide patterns of major accidents on highways, given that the majority of such incidents are covered by the media</p>
+</div>
+</div>
+<section id="data-completeness" class="level1">
+<h1>Data Completeness</h1>
+<p>We only considered variables with &gt;70% completeness for quantitative analysis. Meanwhile, variables with more than 30% missing data were analyzed qualitatively using natural language processing techniques, including word cloud analysis.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="trend-in-road-traffic-accidents" class="level1">
+<h1>Trend in Road Traffic Accidents</h1>
+<section id="trend-of-total-accidents-reported-in-newspapers-2021-2024" class="level2">
+<h2 class="anchored" data-anchor-id="trend-of-total-accidents-reported-in-newspapers-2021-2024">Trend of Total Accidents Reported in Newspapers, 2021-2024</h2>
+<p>The number of highway accidents reported in newspapers in the first quarter of 2024 is already one-third of the average over the past 3 years from 2021-2023, indicating a similar elevated trajectory in 2024.</p>
+<p>There is an overall spike in the number of accidents were reported in May followed by November to December period.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="trend-of-total-accidents-by-month" class="level2">
+<h2 class="anchored" data-anchor-id="trend-of-total-accidents-by-month">Trend of Total Accidents by Month</h2>
+<p>There is an overall spike in the number of accidents reported in May followed by November to December period.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="trend-of-total-accidents-reported-by-month-faceted-by-year" class="level2">
+<h2 class="anchored" data-anchor-id="trend-of-total-accidents-reported-by-month-faceted-by-year">Trend of Total Accidents Reported by Month Faceted by Year</h2>
+<p>There is a consistent marginal increase in road crashes reported by newspapers in May in all 3 years between 2021 to 2023. However, this report only covers data up to April.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-rported-by-month-by-type-of-car-involved" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-rported-by-month-by-type-of-car-involved">Total Number of Accidents Rported by Month by Type of Car Involved</h2>
+<p>Trucks registered the highest number of accidents consistent reported by newspapers over the 12 months of year.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-rported-by-month-by-type-of-car-involved-faceted-by-year" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-rported-by-month-by-type-of-car-involved-faceted-by-year">Total Number of Accidents Rported by Month by Type of Car Involved Faceted by Year</h2>
+<p>Trucks registered the highest number of accidents consistent reported by newspapers over the 12 months of the period 2021 to 2023, including the first quarter of 2024.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="time-analysis" class="level1">
+<h1>Time Analysis</h1>
+<section id="total-number-of-accidents-reported-by-time-of-occurrence" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-reported-by-time-of-occurrence">Total Number of Accidents Reported by Time of Occurrence</h2>
+<p>The highest proportion of accidents reported happened at 6 am in the morning.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-reported-by-time-of-occurence-by-car-type" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-reported-by-time-of-occurence-by-car-type">Total Number of Accidents Reported by Time of Occurence by car type</h2>
+<p>Accidents occured most at 6am, this was consistent for most of the car types. Trucks had the highest number of road crushes happening at 6 am in the morning followed by Private cars</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-by-month-and-accident-type" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-by-month-and-accident-type">Total Number of Accidents by month and accident type</h2>
+<p>Most accidents happened at 6 am in the morning with cars overturning being the commonest type of accident. Atleast all accident type registered atleast 1 accident at 6 am in the morning.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-by-month-and-accident-type-over-the-three-years" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-by-month-and-accident-type-over-the-three-years">Total Number of Accidents by month and accident type over the three years</h2>
+<p>Generally, most accidents happened at 6 am in the morning. Cars overturning was the most type of accident reported at 6 am over the 3 years from 2021 to 2023, however, this has not been observed in 2024.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-by-type-and-time-of-day" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-by-type-and-time-of-day">Total Number of Accidents by type and time of day</h2>
+<p>Generally most head on collisions and cars ramming onto stationary trucks happened at night</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-by-day-of-week" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-by-day-of-week">Total Number of Accidents by day of week</h2>
+<p>Generally more road crushed were reported on Monday and Tuesday, with the least number of road crushes reported on a Saturday.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-by-day-of-week-and-time-of-day" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-by-day-of-week-and-time-of-day">Total Number of Accidents by day of week and time of day</h2>
+<p>Most road crushes reported by newspapers occured on a Monday monrning.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-by-day-of-week-over-the-three-years" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-by-day-of-week-over-the-three-years">Total Number of Accidents by day of week over the three years</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="total-number-of-accidents-by-day-of-week-and-time-of-day-over-the-three-years" class="level2">
+<h2 class="anchored" data-anchor-id="total-number-of-accidents-by-day-of-week-and-time-of-day-over-the-three-years">Total Number of Accidents by day of week and time of day over the three years</h2>
+<p>The prevalent occurrence of road crushes at 6 am in the morning is consistent over the three years under study. However, the consistency in days is only true on Monday mornings and spread ramdomly throught the days of the week when compared over the three years from 2021 to 2023, however, this has not yet been observed in 2024.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>news</category>
+  <guid>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april.html</guid>
+  <pubDate>Tue, 28 May 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/acci.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Trends of Road Traffic Accidents</title>
   <dc:creator>Daniel Eurien</dc:creator>
@@ -252,7 +485,7 @@ Note
  ]]></description>
   <category>news</category>
   <guid>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/trend.html</guid>
-  <pubDate>Thu, 23 May 2024 21:00:00 GMT</pubDate>
+  <pubDate>Fri, 24 May 2024 00:00:00 GMT</pubDate>
   <media:content url="https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/accident.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
@@ -415,7 +648,7 @@ Figure&nbsp;2: Process of annotation
   <category>123</category>
   <category>Second Tag</category>
   <guid>https://DataSense-Consulting.com/posts/data aquisition process/accident-data-aquisition.html</guid>
-  <pubDate>Sun, 12 May 2024 21:00:00 GMT</pubDate>
+  <pubDate>Mon, 13 May 2024 00:00:00 GMT</pubDate>
   <media:content url="https://DataSense-Consulting.com/posts/data aquisition process/ner.png" medium="image" type="image/png" height="45" width="144"/>
 </item>
 </channel>

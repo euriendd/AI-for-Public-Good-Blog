@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/trend.html</loc>
-    <lastmod>2024-05-14T18:39:59.796Z</lastmod>
+    <loc>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents April 2024/april.html</loc>
+    <lastmod>2024-05-29T10:40:30.660Z</lastmod>
   </url>
   <url>
-    <loc>https://DataSense-Consulting.com/index.html</loc>
-    <lastmod>2024-05-14T09:38:51.536Z</lastmod>
-  </url>
-  <url>
-    <loc>https://DataSense-Consulting.com/archive.html</loc>
-    <lastmod>2024-05-13T16:47:31.862Z</lastmod>
+    <loc>https://DataSense-Consulting.com/posts/data aquisition process/accident-data-aquisition.html</loc>
+    <lastmod>2024-05-14T16:48:36.204Z</lastmod>
   </url>
   <url>
     <loc>https://DataSense-Consulting.com/blog.html</loc>
     <lastmod>2024-05-14T07:43:06.085Z</lastmod>
   </url>
   <url>
-    <loc>https://DataSense-Consulting.com/posts/data aquisition process/accident-data-aquisition.html</loc>
-    <lastmod>2024-05-14T16:48:36.204Z</lastmod>
+    <loc>https://DataSense-Consulting.com/archive.html</loc>
+    <lastmod>2024-05-13T16:47:31.862Z</lastmod>
+  </url>
+  <url>
+    <loc>https://DataSense-Consulting.com/index.html</loc>
+    <lastmod>2024-05-14T09:38:51.536Z</lastmod>
+  </url>
+  <url>
+    <loc>https://DataSense-Consulting.com/posts/Trend of Road Traffic Accidents/trend.html</loc>
+    <lastmod>2024-05-14T18:39:59.796Z</lastmod>
   </url>
 </urlset>
